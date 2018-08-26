@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: BuddyPress Dynamic User Tab Content
- * Version: 1.0.0
+ * Version: 1.0.1
  * Plugin URI: https://buddydev.com/create-dynamic-user-profile-tabs-for-buddypress/
  * Author: BuddyDev
  * Author URI: https://BuddyDev.com

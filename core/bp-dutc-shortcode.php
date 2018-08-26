@@ -72,9 +72,14 @@ class BP_Dynamic_User_Tab_Content_Shortcode {
 		if ( $query->have_posts() ) {
 			$query->the_post();
 			$post = get_post( get_the_ID() );
+			setup_postdata( $post );
+			// $post_content = apply_filters( 'the_content', $post->post_content, $post->ID );
+			ob_start();
+			the_content();
 
-			$post_content = apply_filters( 'the_content', $post->post_content, $post->ID );
+			$post_content = ob_get_clean();
 			wp_reset_postdata();
+
 		}
 
 		return $post_content;
